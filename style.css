@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Freesentation";
+    src: url("./FreesentationVF.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* =========================
+   기본 설정
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: #ffffff;
+    color: #222222;
+
+    font-family: "Freesentation", sans-serif;
+}
+
+
+/* =========================
+   Wallet Panic 로고
+========================= */
+
+.logo {
+    position: absolute;
+
+    top: 58px;
+    left: 102px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   로그인 전체 영역
+========================= */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   로그인 박스
+========================= */
+
+.login-box {
+    width: 580px;
+    height: 365px;
+
+    border: 2px solid #d6d6d6;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 38px;
+}
+
+
+/* =========================
+   로그인 제목
+========================= */
+
+.login-box h1 {
+    font-size: 35px;
+    font-weight: 400;
+
+    color: #7300e6;
+
+    margin-bottom: 48px;
+
+    letter-spacing: -1.5px;
+}
+
+.login-box h1 strong {
+    font-weight: 700;
+}
+
+
+/* =========================
+   ID / Password 입력창
+========================= */
+
+.login-box input {
+    width: 320px;
+    height: 57px;
+
+    border: 1.5px solid #d5d5d5;
+    border-radius: 7px;
+
+    padding: 0 20px;
+
+    font-family: "Freesentation", sans-serif;
+    font-size: 21px;
+
+    outline: none;
+
+    color: #333333;
+}
+
+.login-box input:first-of-type {
+    margin-bottom: 24px;
+}
+
+
+/* 입력창을 클릭했을 때 */
+
+.login-box input:focus {
+    border-color: #7300e6;
+}
+
+
+/* 입력창 안의 ID / Password 글자 */
+
+.login-box input::placeholder {
+    color: #777777;
+}
+
+
+/* =========================
+   비밀번호 찾기
+========================= */
+
+.forgot-password {
+    margin-top: 35px;
+
+    font-size: 18px;
+
+    letter-spacing: -0.5px;
+}
+
+.forgot-password span:first-child {
+    color: #7300e6;
+}
+
+.tough-luck {
+    color: #222222;
+
+    margin-left: 4px;
+}
+
+
+/* =========================
+   모바일 화면
+========================= */
+
+@media (max-width: 768px) {
+
+    .logo {
+        top: 30px;
+        left: 30px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .login-box {
+        width: calc(100% - 40px);
+        max-width: 580px;
+
+        height: auto;
+        min-height: 350px;
+
+        padding: 35px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 28px;
+
+        margin-bottom: 40px;
+    }
+
+    .login-box input {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .forgot-password {
+        font-size: 16px;
+    }
+}
