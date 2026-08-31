@@ -95,6 +95,13 @@ body {
     font-weight: 700;
 }
 
+.login-box form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* =========================
    ID / Password 입력창
