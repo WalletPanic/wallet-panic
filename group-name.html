@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Group Name | Wallet Panic</title>
+
+    <link rel="stylesheet" href="group.css?v=1">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <img
+            src="wallet-panic.png"
+            alt="Wallet Panic"
+            class="sidebar-logo"
+        >
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="login-link">
+                LOG IN / SIGN UP
+            </a>
+
+            <div class="group-menu">
+
+                <a href="new-group.html" class="active">
+                    +NEW GROUP
+                </a>
+
+                <a href="#">
+                    JOIN WITH CODE
+                </a>
+
+                <a href="#">
+                    SHARED GROUPS
+                </a>
+
+            </div>
+
+            <a href="#" class="feedback-link">
+                SEND FEEDBACK
+            </a>
+
+        </nav>
+
+        <button class="notification-button">
+            <span class="bell">🔔</span>
+
+            <span>
+                NOTIFI-<br>
+                CATIONS
+            </span>
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <section class="group-card name-card">
+
+            <input
+                type="text"
+                id="groupName"
+                maxlength="20"
+                placeholder="Enter Your Group Name"
+                autocomplete="off"
+            >
+
+            <div class="name-underline"></div>
+
+            <p class="character-count">
+                <span id="currentLength">0</span>/20
+            </p>
+
+        </section>
+
+
+        <button
+            type="button"
+            id="nameNext"
+            class="main-button"
+        >
+            NEXT
+        </button>
+
+    </main>
+
+
+    <script src="group-name.js"></script>
+
+</body>
+</html>
