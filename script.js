@@ -1,39 +1,25 @@
 const loginForm = document.getElementById("loginForm");
 
-loginForm.addEventListener("submit", async function (event) {
+loginForm.addEventListener("submit", function (event) {
+
+    // 원래 form의 새로고침 동작 막기
     event.preventDefault();
 
-    const userId = document.getElementById("userId").value;
-    const password = document.getElementById("password").value;
+    // 입력한 ID와 Password 가져오기
+    const userId = document.getElementById("userId").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    try {
-        const response = await fetch("백엔드주소/register", {
-            method: "POST",
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+    // 아무것도 입력하지 않은 경우
+    if (userId === "" || password === "") {
 
-            body: JSON.stringify({
-                userId: userId,
-                password: password
-            })
-        });
+        alert("아이디와 비밀번호를 입력해주세요.");
 
-        const result = await response.json();
-
-        if (response.ok) {
-            console.log("계정 저장 성공");
-
-            // 나중에 화면 전환할 때 사용
-            // window.location.href = "next.html";
-        } else {
-            alert(result.message);
-        }
-
-    } catch (error) {
-        console.error(error);
-
-        alert("서버에 연결할 수 없습니다.");
+        return;
     }
+
+
+    // 1번 페이지로 이동
+    window.location.href = "new-group.html";
+
 });
