@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Group | Wallet Panic</title>
+
+    <link rel="stylesheet" href="group.css?v=1">
+</head>
+
+<body>
+
+    <!-- 왼쪽 메뉴 -->
+    <aside class="sidebar">
+
+        <img
+            src="wallet-panic.png"
+            alt="Wallet Panic"
+            class="sidebar-logo"
+        >
+
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="login-link">
+                LOG IN / SIGN UP
+            </a>
+
+            <div class="group-menu">
+                <a href="new-group.html" class="active">
+                    +NEW GROUP
+                </a>
+
+                <a href="#">
+                    JOIN WITH CODE
+                </a>
+
+                <a href="#">
+                    SHARED GROUPS
+                </a>
+            </div>
+
+            <a href="#" class="feedback-link">
+                SEND FEEDBACK
+            </a>
+
+        </nav>
+
+
+        <button class="notification-button">
+            <span class="bell">🔔</span>
+
+            <span>
+                NOTIFI-<br>
+                CATIONS
+            </span>
+        </button>
+
+    </aside>
+
+
+    <!-- 오른쪽 메인 화면 -->
+    <main class="main-content">
+
+        <section class="group-card participant-card">
+
+            <button
+                type="button"
+                id="minusButton"
+                class="circle-button"
+                aria-label="인원 감소"
+            >
+                −
+            </button>
+
+            <span id="participantCount" class="participant-count">
+                1
+            </span>
+
+            <button
+                type="button"
+                id="plusButton"
+                class="circle-button"
+                aria-label="인원 증가"
+            >
+                +
+            </button>
+
+        </section>
+
+
+        <button
+            type="button"
+            id="participantNext"
+            class="main-button"
+        >
+            NEXT
+        </button>
+
+    </main>
+
+
+    <script src="group-size.js"></script>
+
+</body>
+</html>
