@@ -2,36 +2,116 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Sign Up | Wallet Panic</title>
-    <link rel="stylesheet" href="style.css?v=5">
+
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
+
 <body>
+
+    <!-- Wallet Panic 로고 -->
     <header class="logo">
-        <img src="wallet-panic.png" alt="Wallet Panic">
+        <a href="index.html">
+            <img
+                src="wallet-panic.png"
+                alt="Wallet Panic"
+            >
+        </a>
     </header>
 
+    <!-- 회원가입 영역 -->
     <main class="login-container">
+
         <div class="login-box signup-box">
-            <h1><strong>Create</strong> your account</h1>
+
+            <h1>
+                <strong>Create</strong> your account
+            </h1>
 
             <form id="signupForm" novalidate>
-                <input type="text" id="userId" placeholder="ID" autocomplete="username" maxlength="30" required>
-                <p class="input-hint">3–30 letters, numbers, or _</p>
-                <input type="password" id="password" placeholder="Password" autocomplete="new-password" maxlength="72" required>
-                <input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="new-password" maxlength="72" required>
 
-                <p id="formMessage" class="form-message" role="alert" aria-live="polite"></p>
-                <button type="submit" class="auth-button">CREATE ACCOUNT</button>
+                <!-- Email -->
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                >
 
+                <!-- Password -->
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    maxlength="72"
+                    required
+                >
+
+                <!-- Confirm Password -->
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    maxlength="72"
+                    required
+                >
+
+                <!-- 안내 및 오류 메시지 -->
+                <p
+                    id="formMessage"
+                    class="form-message"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
+                <!-- 회원가입 버튼 -->
+                <button
+                    type="submit"
+                    class="auth-button"
+                >
+                    CREATE ACCOUNT
+                </button>
+
+                <!-- 로그인 페이지 연결 -->
                 <div class="forgot-password">
                     <span>Already have an account?</span>
-                    <a href="index.html" class="signup-link">Sign in.</a>
+
+                    <a
+                        href="index.html"
+                        class="signup-link"
+                    >
+                        Sign in.
+                    </a>
                 </div>
+
             </form>
+
         </div>
+
     </main>
 
+    <!-- Supabase 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase 주소와 Publishable Key -->
+    <script src="supabase-config.js"></script>
+
+    <!-- 회원가입 기능 -->
     <script src="signup.js"></script>
+
 </body>
 </html>
