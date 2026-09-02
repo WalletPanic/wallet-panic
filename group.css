@@ -186,15 +186,15 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 85px;
+    gap: 70px;
 }
 
 .circle-button {
-    width: 100px;
-    height: 100px;
+    width: 84px;
+    height: 84px;
 
     border: none;
-    border-radius: 50%;
+    border-radius: 48%;
 
     background-color: #eeeeee;
 
@@ -213,11 +213,11 @@ body {
 }
 
 .participant-count {
-    width: 80px;
+    width: 65px;
 
     text-align: center;
 
-    font-size: 88px;
+    font-size: 74px;
     font-weight: 800;
 
     color: #7300e6;
@@ -265,7 +265,7 @@ body {
 }
 
 #groupName {
-    width: 490px;
+    width: 410px;
 
     border: none;
     outline: none;
@@ -274,7 +274,7 @@ body {
 
     font-family: "Freesentation", sans-serif;
 
-    font-size: 42px;
+    font-size: 35px;
     font-weight: 700;
 
     color: #222222;
@@ -288,20 +288,20 @@ body {
 }
 
 .name-underline {
-    width: 490px;
-    height: 4px;
+    width: 410px;
+    height: 3px;
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     background-color: #7300e6;
 }
 
 .character-count {
-    margin-top: 15px;
+    margin-top: 12px;
 
     color: #aaaaaa;
 
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -316,24 +316,24 @@ body {
     justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 }
 
 .hash,
 .group-code {
     color: #7300e6;
 
-    font-size: 72px;
+    font-size: 60px;
     font-weight: 800;
 }
 
 .copy-button {
     position: relative;
 
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 
-    margin-left: 20px;
+    margin-left: 16px;
 
     border: none;
 
@@ -346,21 +346,21 @@ body {
 .copy-front {
     position: absolute;
 
-    width: 38px;
-    height: 45px;
+    width: 32px;
+    height: 38px;
 
-    border: 4px solid #999999;
-    border-radius: 9px;
+    border: 3px solid #999999;
+    border-radius: 7px;
 
     background-color: #FCFCFC;
 }
 
 .copy-back {
-    top: 4px;
-    left: 5px;
+    top: 3px;
+    left: 4px;
 }
 
 .copy-front {
-    top: 12px;
-    left: 13px;
+    top: 10px;
+    left: 11px;
 }
