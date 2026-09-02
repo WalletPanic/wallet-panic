@@ -10,7 +10,7 @@
 
     <title>Wallet Panic</title>
 
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 
 <body>
@@ -66,10 +66,15 @@
                     aria-live="polite"
                 ></p>
 
-                <!-- 로그인 버튼 -->
+                <!--
+                    화면에는 보이지 않지만
+                    Enter 로그인을 위한 submit 버튼
+                -->
                 <button
                     type="submit"
-                    class="auth-button"
+                    class="hidden-submit"
+                    tabindex="-1"
+                    aria-hidden="true"
                 >
                     SIGN IN
                 </button>
@@ -99,11 +104,11 @@
     <!-- Supabase JavaScript 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    <!-- Supabase 주소와 Publishable Key -->
-    <script src="supabase-config.js"></script>
+    <!-- Supabase 설정 -->
+    <script src="supabase-config.js?v=1"></script>
 
     <!-- 로그인 기능 -->
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 
 </body>
 </html>
