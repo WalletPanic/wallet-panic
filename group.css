@@ -155,7 +155,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 50px;
+    gap: 25px;
 
     padding-bottom: 30px;
 }
@@ -229,11 +229,11 @@ body {
 ========================= */
 
 .main-button {
-    width: 202px;
-    height: 80px;
+    width: 162px;
+    height: 64px;
 
     border: none;
-    border-radius: 14px;
+    border-radius: 11px;
 
     background-color: #9b4ede;
 
@@ -241,7 +241,7 @@ body {
 
     font-family: "Freesentation", sans-serif;
 
-    font-size: 31px;
+    font-size: 25px;
     font-weight: 700;
 
     cursor: pointer;
