@@ -74,8 +74,24 @@ copyButton.addEventListener("click", async function () {
 // CREATE 버튼
 createButton.addEventListener("click", function () {
 
-    console.log("그룹 인원:", localStorage.getItem("groupSize"));
-    console.log("그룹 이름:", localStorage.getItem("groupName"));
-    console.log("그룹 코드:", localStorage.getItem("groupCode"));
+    const groupSize = Number(localStorage.getItem("groupSize"));
+
+    // 1명 그룹
+    if (groupSize === 1) {
+
+        window.location.href = "dashboard.html";
+        return;
+
+    }
+
+    // 2~6명 그룹
+    if (groupSize >= 2 && groupSize <= 6) {
+
+        alert("다인 그룹 기능은 업데이트 예정입니다. 조금만 기다려주세요!");
+        return;
+
+    }
+
+    alert("그룹 인원 정보를 확인할 수 없습니다.");
 
 });
