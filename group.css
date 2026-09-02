@@ -229,11 +229,11 @@ body {
 ========================= */
 
 .main-button {
-    width: 280px;
-    height: 110px;
+    width: 238px;
+    height: 94px;
 
     border: none;
-    border-radius: 20px;
+    border-radius: 17px;
 
     background-color: #9b4ede;
 
@@ -241,7 +241,7 @@ body {
 
     font-family: "Freesentation", sans-serif;
 
-    font-size: 43px;
+    font-size: 37px;
     font-weight: 700;
 
     cursor: pointer;
