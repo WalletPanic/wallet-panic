@@ -3,13 +3,13 @@ const plusButton = document.getElementById("plusButton");
 const participantCount = document.getElementById("participantCount");
 const nextButton = document.getElementById("participantNext");
 
-let count = 1;
+let count = 2;
 
 
 // 마이너스 버튼
 minusButton.addEventListener("click", function () {
 
-    if (count > 1) {
+    if (count > 2) {
         count = count - 1;
         participantCount.textContent = count;
     }
