@@ -1,0 +1,557 @@
+/* =========================
+   Freesentation
+========================= */
+
+@font-face {
+    font-family: "Freesentation";
+    src: url("./FreesentationVF.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+/* =========================
+   기본
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Freesentation", sans-serif;
+
+    background-image: url("./background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #111111;
+}
+
+
+/* =========================
+   사이드바
+========================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 340px;
+    height: 100vh;
+}
+
+
+.sidebar-logo {
+    position: absolute;
+
+    top: 55px;
+    left: 95px;
+
+    width: 125px;
+    height: auto;
+}
+
+
+.sidebar-menu {
+    position: absolute;
+
+    top: 180px;
+    left: 95px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 18px;
+}
+
+
+.sidebar-menu a {
+    color: #707070;
+
+    text-decoration: none;
+}
+
+
+.sidebar-menu a:hover {
+    color: #7300e6;
+}
+
+
+.logout-link {
+    margin-bottom: 60px;
+}
+
+
+.group-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+.group-menu a:first-child {
+    color: #222222;
+}
+
+
+.feedback-link {
+    margin-top: 60px;
+}
+
+
+/* =========================
+   알림 버튼
+========================= */
+
+.notification-button {
+    position: absolute;
+
+    left: 95px;
+    bottom: 90px;
+
+    width: 140px;
+    height: 70px;
+
+    border: none;
+    border-radius: 35px;
+
+    background-color: #8500ff;
+
+    color: white;
+
+    font-family: "Freesentation", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   Dashboard 전체
+========================= */
+
+.dashboard {
+    min-height: 100vh;
+
+    margin-left: 340px;
+
+    padding:
+        50px
+        55px
+        50px
+        20px;
+}
+
+
+/* =========================
+   Dashboard 제목
+========================= */
+
+.dashboard-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+}
+
+
+.dashboard-header h1 {
+    font-size: 31px;
+    font-weight: 700;
+}
+
+
+.dashboard-header p {
+    margin-top: 4px;
+
+    font-size: 19px;
+
+    color: #777777;
+}
+
+
+.edit-profile-button {
+    width: 190px;
+    height: 54px;
+
+    background-color: #FCFCFC;
+
+    border: 1px solid #dedede;
+
+    border-radius: 16px;
+
+    font-family: "Freesentation", sans-serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   공통 박스
+========================= */
+
+.panel {
+    background-color: #FCFCFC;
+
+    border: 1.5px solid #dddddd;
+
+    border-radius: 17px;
+}
+
+
+/* =========================
+   레이아웃
+========================= */
+
+.top-grid,
+.bottom-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.bottom-grid {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   프로필
+========================= */
+
+.profile-panel {
+    height: 315px;
+
+    overflow: hidden;
+}
+
+
+.profile-top {
+    height: 160px;
+
+    padding: 30px 38px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.profile-image {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    background-color: #e5daff;
+
+    margin-right: 25px;
+}
+
+
+.profile-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.profile-name h2 {
+    font-size: 27px;
+}
+
+
+.spender-badge {
+    padding: 5px 12px;
+
+    border-radius: 12px;
+
+    background-color: #eee5ff;
+
+    color: #7300e6;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.email {
+    margin-top: 12px;
+
+    color: #777777;
+
+    font-size: 16px;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   오늘 / 이번 달 / 예산
+========================= */
+
+.summary-grid {
+    height: 155px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.summary-item {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #777777;
+}
+
+
+.summary-item:not(:last-child) {
+    border-right: 1px solid #eeeeee;
+}
+
+
+.summary-item strong {
+    color: #8000ff;
+
+    font-size: 26px;
+}
+
+
+/* =========================
+   최근 거래
+========================= */
+
+.recent-panel {
+    height: 315px;
+
+    padding: 28px 35px;
+}
+
+
+.panel-title {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 14px;
+}
+
+
+.panel-title h2 {
+    font-size: 18px;
+}
+
+
+.panel-title button {
+    border: none;
+
+    background: transparent;
+
+    color: #8000ff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   거래 항목
+========================= */
+
+.transaction,
+.daily-item {
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.transaction-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.transaction-info strong,
+.transaction-price strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.transaction-info small,
+.transaction-price small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777777;
+
+    font-size: 10px;
+}
+
+
+.transaction-price {
+    text-align: right;
+}
+
+
+/* 아이콘 */
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.purple {
+    background-color: #eee5ff;
+}
+
+
+.pink {
+    background-color: #ffe4f2;
+}
+
+
+.blue {
+    background-color: #e8ecff;
+}
+
+
+.orange {
+    background-color: #fff0dc;
+}
+
+
+/* =========================
+   왼쪽 아래 빈 공간
+========================= */
+
+.calendar-panel {
+    height: 410px;
+}
+
+
+/* =========================
+   오른쪽 아래
+========================= */
+
+.daily-panel {
+    height: 410px;
+
+    padding: 36px 40px;
+}
+
+
+.daily-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.daily-header h2 {
+    font-size: 19px;
+}
+
+
+.daily-header p {
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+.daily-header > strong {
+    color: #8000ff;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   작은 화면
+========================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+        width: 260px;
+    }
+
+
+    .dashboard {
+        margin-left: 260px;
+    }
+
+
+    .top-grid,
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
