@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Wallet Panic</title>
+
+    <link rel="stylesheet" href="dashboard.css?v=1">
+</head>
+
+<body>
+
+    <!-- =========================
+         왼쪽 사이드바
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html">
+            <img
+                src="wallet-panic.png"
+                alt="Wallet Panic"
+                class="sidebar-logo"
+            >
+        </a>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="#" id="logoutButton" class="logout-link">
+                LOG OUT
+            </a>
+
+
+            <div class="group-menu">
+
+                <a href="new-group.html">
+                    +NEW GROUP
+                </a>
+
+                <a href="#">
+                    JOIN WITH CODE
+                </a>
+
+                <a href="#">
+                    SHARED GROUPS
+                </a>
+
+            </div>
+
+
+            <a href="#" class="feedback-link">
+                SEND FEEDBACK
+            </a>
+
+        </nav>
+
+
+        <button class="notification-button">
+            🔔
+            <span>
+                NOTIFI-<br>
+                CATIONS
+            </span>
+        </button>
+
+    </aside>
+
+
+    <!-- =========================
+         Dashboard
+    ========================== -->
+
+    <main class="dashboard">
+
+        <!-- 상단 제목 -->
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Here’s your spending overview.</p>
+            </div>
+
+            <button class="edit-profile-button">
+                EDIT PROFILE
+            </button>
+
+        </header>
+
+
+        <!-- =========================
+             윗부분
+        ========================== -->
+
+        <section class="top-grid">
+
+
+            <!-- 프로필 -->
+
+            <article class="panel profile-panel">
+
+                <div class="profile-top">
+
+                    <div class="profile-image"></div>
+
+
+                    <div class="profile-info">
+
+                        <div class="profile-name">
+
+                            <h2>Test Account</h2>
+
+                            <span class="spender-badge">
+                                TOP n% SPENDER
+                            </span>
+
+                        </div>
+
+                        <p class="email">
+                            test@email.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+                    <div class="summary-item">
+                        <span>TODAY</span>
+                        <strong>₩61,300</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>THIS MONTH</span>
+                        <strong>₩214,500</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>BUDGET</span>
+                        <strong>₩600,000</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 최근 거래 -->
+
+            <article class="panel recent-panel">
+
+                <div class="panel-title">
+
+                    <h2>Recent Transactions</h2>
+
+                    <button>
+                        VIEW ALL &gt;
+                    </button>
+
+                </div>
+
+
+                <div class="transaction">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon purple">
+                            ☕
+                        </div>
+
+                        <div>
+                            <strong>Starbucks</strong>
+                            <small>Cafe</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩5,200</strong>
+                        <small>Today 10:42</small>
+                    </div>
+
+                </div>
+
+
+                <div class="transaction">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon pink">
+                            🛒
+                        </div>
+
+                        <div>
+                            <strong>Market Kurly</strong>
+                            <small>Groceries</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩32,800</strong>
+                        <small>Yesterday 19:40</small>
+                    </div>
+
+                </div>
+
+
+                <div class="transaction">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon blue">
+                            🚇
+                        </div>
+
+                        <div>
+                            <strong>Kakao T</strong>
+                            <small>Transport</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩8,500</strong>
+                        <small>Yesterday 09:31</small>
+                    </div>
+
+                </div>
+
+
+                <div class="transaction">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon orange">
+                            🍔
+                        </div>
+
+                        <div>
+                            <strong>McDonalds</strong>
+                            <small>Food</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩9,000</strong>
+                        <small>May 20 12:17</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             아래
+        ========================== -->
+
+        <section class="bottom-grid">
+
+
+            <!-- 달력 자리
+                 일단 비워놓음 -->
+
+            <article class="panel calendar-panel">
+            </article>
+
+
+            <!-- 하루 소비 내역 -->
+
+            <article class="panel daily-panel">
+
+                <div class="daily-header">
+
+                    <div>
+                        <h2>May 21 (Wed)</h2>
+                        <p>Total 7 items</p>
+                    </div>
+
+                    <strong>- ₩61,300</strong>
+
+                </div>
+
+
+                <div class="daily-item">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon purple">
+                            ☕
+                        </div>
+
+                        <div>
+                            <strong>Starbucks</strong>
+                            <small>Cafe</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩5,200</strong>
+                        <small>Today 10:42</small>
+                    </div>
+
+                </div>
+
+
+                <div class="daily-item">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon pink">
+                            🛒
+                        </div>
+
+                        <div>
+                            <strong>Starbucks</strong>
+                            <small>Cafe</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩5,200</strong>
+                        <small>Today 10:42</small>
+                    </div>
+
+                </div>
+
+
+                <div class="daily-item">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon blue">
+                            🚇
+                        </div>
+
+                        <div>
+                            <strong>Starbucks</strong>
+                            <small>Cafe</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩5,200</strong>
+                        <small>Today 10:42</small>
+                    </div>
+
+                </div>
+
+
+                <div class="daily-item">
+
+                    <div class="transaction-info">
+
+                        <div class="transaction-icon orange">
+                            🍔
+                        </div>
+
+                        <div>
+                            <strong>Starbucks</strong>
+                            <small>Cafe</small>
+                        </div>
+
+                    </div>
+
+                    <div class="transaction-price">
+                        <strong>- ₩5,200</strong>
+                        <small>Today 10:42</small>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- 이전에 만든 로그아웃 -->
+    <script src="logout.js?v=3"></script>
+
+</body>
+
+</html>
