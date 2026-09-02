@@ -2,18 +2,27 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Wallet Panic</title>
 
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 
 <body>
 
     <!-- Wallet Panic 로고 -->
     <header class="logo">
-        <img src="wallet-panic.png" alt="Wallet Panic">
+        <a href="index.html">
+            <img
+                src="wallet-panic.png"
+                alt="Wallet Panic"
+            >
+        </a>
     </header>
 
     <!-- 로그인 영역 -->
@@ -27,14 +36,14 @@
 
             <form id="loginForm" novalidate>
 
-                <!-- ID -->
+                <!-- Email -->
                 <input
-                    type="text"
-                    id="userId"
-                    name="userId"
-                    placeholder="ID"
-                    autocomplete="username"
-                    maxlength="30"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    autocomplete="email"
+                    maxlength="254"
                     required
                 >
 
@@ -67,7 +76,10 @@
 
                 <!-- 회원가입 페이지 연결 -->
                 <div class="forgot-password">
-                    <span>New to Wallet Panic?</span>
+
+                    <span>
+                        New to Wallet Panic?
+                    </span>
 
                     <a
                         href="signup.html"
@@ -75,6 +87,7 @@
                     >
                         Create an account.
                     </a>
+
                 </div>
 
             </form>
@@ -83,8 +96,13 @@
 
     </main>
 
+    <!-- Supabase JavaScript 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase 주소와 Publishable Key -->
     <script src="supabase-config.js"></script>
+
+    <!-- 로그인 기능 -->
     <script src="script.js"></script>
 
 </body>
