@@ -208,6 +208,36 @@ body {
     cursor: pointer;
 }
 
+.header-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* + ADD EXPENSES 버튼 */
+
+.add-expense-button {
+    width: 190px;
+    height: 54px;
+
+    border: none;
+    border-radius: 16px;
+
+    background-color: #7300E6;
+    color: #FFFFFF;
+
+    font-family: "Freesentation", sans-serif;
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+/* 마우스 올렸을 때 */
+
+.add-expense-button:hover {
+    background-color: #6200C4;
+}
 
 /* =========================
    공통 박스
