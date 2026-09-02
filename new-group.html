@@ -3,16 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>New Group | Wallet Panic</title>
 
-    <link rel="stylesheet" href="group.css?v=1">
+    <link rel="stylesheet" href="group.css?v=2">
 </head>
 
 <body>
 
-    <!-- 왼쪽 메뉴 -->
+    <!-- 왼쪽 사이드바 -->
     <aside class="sidebar">
 
         <img
@@ -23,12 +27,23 @@
 
         <nav class="sidebar-menu">
 
-            <a href="index.html" class="login-link">
+            <!--
+                로그인하면 auth.js가 이 부분을
+                LOG OUT (이메일)로 변경함
+            -->
+            <a
+                href="index.html"
+                class="login-link"
+            >
                 LOG IN / SIGN UP
             </a>
 
             <div class="group-menu">
-                <a href="new-group.html" class="active">
+
+                <a
+                    href="new-group.html"
+                    class="active"
+                >
                     +NEW GROUP
                 </a>
 
@@ -39,16 +54,23 @@
                 <a href="#">
                     SHARED GROUPS
                 </a>
+
             </div>
 
-            <a href="#" class="feedback-link">
+            <a
+                href="#"
+                class="feedback-link"
+            >
                 SEND FEEDBACK
             </a>
 
         </nav>
 
-
-        <button class="notification-button">
+        <!-- 알림 버튼 -->
+        <button
+            type="button"
+            class="notification-button"
+        >
             <span class="bell">🔔</span>
 
             <span>
@@ -59,12 +81,12 @@
 
     </aside>
 
-
     <!-- 오른쪽 메인 화면 -->
     <main class="main-content">
 
         <section class="group-card participant-card">
 
+            <!-- 인원 감소 -->
             <button
                 type="button"
                 id="minusButton"
@@ -74,10 +96,15 @@
                 −
             </button>
 
-            <span id="participantCount" class="participant-count">
+            <!-- 현재 인원 -->
+            <span
+                id="participantCount"
+                class="participant-count"
+            >
                 1
             </span>
 
+            <!-- 인원 증가 -->
             <button
                 type="button"
                 id="plusButton"
@@ -89,7 +116,7 @@
 
         </section>
 
-
+        <!-- 다음 페이지 이동 -->
         <button
             type="button"
             id="participantNext"
@@ -100,8 +127,17 @@
 
     </main>
 
+    <!-- 1. Supabase 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    <script src="group-size.js"></script>
+    <!-- 2. Supabase 프로젝트 주소와 키 -->
+    <script src="supabase-config.js?v=1"></script>
+
+    <!-- 3. 로그인 확인 및 로그아웃 기능 -->
+    <script src="auth.js?v=2"></script>
+
+    <!-- 4. 그룹 인원 선택 기능 -->
+    <script src="group-size.js?v=1"></script>
 
 </body>
 </html>
