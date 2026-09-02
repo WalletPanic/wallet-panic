@@ -6,7 +6,7 @@
 
     <title>Wallet Panic</title>
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -16,8 +16,7 @@
         <img src="wallet-panic.png" alt="Wallet Panic">
     </header>
 
-
-    <!-- 로그인 -->
+    <!-- 로그인 영역 -->
     <main class="login-container">
 
         <div class="login-box">
@@ -26,23 +25,56 @@
                 <strong>Sign in</strong> to your account
             </h1>
 
-            <form id="loginForm">
+            <form id="loginForm" novalidate>
 
+                <!-- ID -->
                 <input
                     type="text"
                     id="userId"
+                    name="userId"
                     placeholder="ID"
+                    autocomplete="username"
+                    maxlength="30"
+                    required
                 >
 
+                <!-- Password -->
                 <input
                     type="password"
                     id="password"
+                    name="password"
                     placeholder="Password"
+                    autocomplete="current-password"
+                    maxlength="72"
+                    required
                 >
 
+                <!-- 로그인 오류 메시지 -->
+                <p
+                    id="formMessage"
+                    class="form-message"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
+                <!-- 로그인 버튼 -->
+                <button
+                    type="submit"
+                    class="auth-button"
+                >
+                    SIGN IN
+                </button>
+
+                <!-- 회원가입 페이지 연결 -->
                 <div class="forgot-password">
-                    <span>Forgot your password?</span>
-                    <span class="tough-luck">Tough luck.</span>
+                    <span>New to Wallet Panic?</span>
+
+                    <a
+                        href="signup.html"
+                        class="signup-link"
+                    >
+                        Create an account.
+                    </a>
                 </div>
 
             </form>
