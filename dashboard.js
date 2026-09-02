@@ -34,4 +34,6 @@ async function loadUser() {
     // 현재 로그인한 사용자의 이메일 표시
     userEmailElement.textContent = user.email;
 
+    logoutEmailElement.textContent = `(${user.email})`;
+
 }
